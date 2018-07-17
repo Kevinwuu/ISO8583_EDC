@@ -17,4 +17,4 @@ Unpack & pack.
 
 
 - **EBC unpack**
-![](https://i.imgur.com/LkVJvPB.png =500x350)
+![](https://i.imgur.com/LkVJvPB.png)
