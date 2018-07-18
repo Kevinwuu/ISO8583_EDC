@@ -1,9 +1,29 @@
-# Web_socket
+# ISO8583_EDC
 
-Use web socket to emulate EBC, try to send messaage according to ISO8583.
+Use web socket to emulate EBC, try to send/recieve messaage according to [ISO8583](https://en.wikipedia.org/wiki/ISO_8583).
 
 ## Goal
-Unpack & pack.
+1. Read msg from EBC
+2. Unpack & pack.
+3. Conmmunicate between cash register & EBC
+
+## Note
+to fix ```undefined reference to `WSACleanup@0' ```  compiling error, according to your enviroment.
+
+- **use IDE**
+[codeblock](https://hackerandgeek.blogspot.com/2010/01/codeblockswinsock-library.html)
+
+- **use Editer**
+    install MINGW gcc/g++
+    
+        gcc server.c -o client -lws2_32
+        gcc client.c -o client -lws2_32
+
+## Usage
+    start server
+    start client
+    
+
 
 ## Result
 
