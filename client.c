@@ -84,12 +84,10 @@ int main()
             break;
         }
         else if(strcmp(szBuf, "ok") == 0){
-            printf("buf = %s\n", szBuf);
             printf("\nEnter msg\n>>");
 
             memset(szBuf, '\0', sizeof(szBuf));
             gets(szBuf);
-            printf("buf = %s\n", szBuf);
             send(s, szBuf, (int)strlen(szBuf), 0);
             system("pause");
 
@@ -106,8 +104,8 @@ int main()
 
 
         // 開始讀取
+        memset(szBuf, '\0', sizeof(szBuf));
         nRcv = recv(s, szBuf, sizeof(szBuf) - 1, 0);
-        printf("STOP\n");
         if (nRcv == SOCKET_ERROR)
         {
             printf("recv error ! \n");

@@ -98,6 +98,8 @@ int main()
 
         printf("---------------------------------------\n");
         printf("Read message...\n\n");
+        // system("pause");
+
         closesocket(listen_s);
 
 
@@ -111,21 +113,16 @@ int main()
         //讀出資料
         memset(szBuf,'\0',sizeof(szBuf));
         nRcv = recv(s, szBuf, sizeof(szBuf) - 1, 0);
-        printf("1\n");
-        printf("%s\n", szBuf);
-        printf("2\n");
         if (nRcv == SOCKET_ERROR)
         {
             printf("Recv error!\n");
             break;
         }
-        printf("3\n");
         if (strcmp(szBuf, "exit") == 0)
         {
             printf("Disconnect !\n");
             break;
         }
-        printf("4\n");
 
         printf("Recieve : %s", szBuf);
         printf("\n---------------------------------------\n");
@@ -133,6 +130,7 @@ int main()
 
          // 回復給client或直接結束
         printf("Send msg or Exit?(ok/exit):\n>>");
+        memset(szBuf, '\0', sizeof(szBuf));
         gets(szBuf);
 
         if (strcmp(szBuf, "exit") == 0)
@@ -147,7 +145,6 @@ int main()
         printf("Wait client msg...\n\n");
 
     }
-
 
     closesocket(s);
     WSACleanup();

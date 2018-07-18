@@ -21,7 +21,6 @@ int main(){
 	printf("File size = %d BYTE\n",size );
 
 	// char ecb_info[474] = {'\0'};
-
 	char int2ascii(int tmp){
 		if (9>=tmp && tmp>=0)
 		{
@@ -162,24 +161,12 @@ int main(){
 		{
 			printf("%d ", i);
 		}
-
 	}
-
 	// itoa(num,str,2);
 
 	memset(buf, '\0', sizeof(buf));
 	disp+=16;
 
-
-
-	// strncpy(buf,copied+disp,16);
-	// printf("Bitmap = %s\n",buf);
-	// memset(buf, '\0', sizeof(buf));
-	// disp+=16;
-
-
-	// printf("LEN = %s\n",LEN);
-	// printf("%d\n",sizeof(buf) );
 
     fclose(fptr);
 

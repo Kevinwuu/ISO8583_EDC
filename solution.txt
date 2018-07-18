@@ -1,3 +1,0 @@
-解決undefined reference to `WSACleanup@0'問題
-
-gcc client.c -o client -lws2_32
